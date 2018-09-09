@@ -1,13 +1,13 @@
-package com.example.khj_pc.twoday
+package com.example.khj_pc.threeday
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.view.View
-import android.app.Activity
 import android.net.Uri
 import android.util.Log
+import com.example.khj_pc.threeday.R
 import kotlinx.android.synthetic.main.activity_main.*
 import pub.devrel.easypermissions.EasyPermissions
 import java.io.File

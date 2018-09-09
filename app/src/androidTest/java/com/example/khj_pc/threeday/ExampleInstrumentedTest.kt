@@ -1,4 +1,4 @@
-package com.example.khj_pc.twoday
+package com.example.khj_pc.threeday
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

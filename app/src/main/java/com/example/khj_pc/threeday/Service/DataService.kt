@@ -1,7 +1,7 @@
-package com.example.khj_pc.twoday.Service
+package com.example.khj_pc.threeday.Service
 
-import com.example.khj_pc.twoday.Data.Data
-import com.example.khj_pc.twoday.Data.DataResponse
+import com.example.khj_pc.threeday.Data.Data
+import com.example.khj_pc.threeday.Data.DataResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST

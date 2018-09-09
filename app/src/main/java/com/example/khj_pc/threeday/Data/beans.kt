@@ -1,4 +1,4 @@
-package com.example.khj_pc.twoday.Data
+package com.example.khj_pc.threeday.Data
 
 data class Data(val full_sentence : String, val target : String)
 

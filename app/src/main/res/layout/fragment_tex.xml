@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlaceholderFragment">
+    tools:context="com.example.khj_pc.threeday.PlaceholderFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textCursorDrawable="@color/colorPrimary"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorText"
                 android:layout_height="match_parent" />
 
         </RelativeLayout>

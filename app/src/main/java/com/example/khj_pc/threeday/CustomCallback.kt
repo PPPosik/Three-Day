@@ -1,4 +1,4 @@
-package com.example.khj_pc.twoday
+package com.example.khj_pc.threeday
 
 import android.app.AlertDialog
 import android.content.Context
@@ -8,12 +8,12 @@ import android.view.ActionMode
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.EditText
-import com.example.khj_pc.twoday.Data.Data
-import com.example.khj_pc.twoday.Data.DataResponse
-import com.example.khj_pc.twoday.Data.WordData
-import com.example.khj_pc.twoday.Data.Words
-import com.example.khj_pc.twoday.Service.DataService
-import com.example.khj_pc.twoday.Util.RetrofitUtil
+import com.example.khj_pc.threeday.R
+import com.example.khj_pc.threeday.Data.Data
+import com.example.khj_pc.threeday.Data.DataResponse
+import com.example.khj_pc.threeday.Data.Words
+import com.example.khj_pc.threeday.Service.DataService
+import com.example.khj_pc.threeday.Util.RetrofitUtil
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

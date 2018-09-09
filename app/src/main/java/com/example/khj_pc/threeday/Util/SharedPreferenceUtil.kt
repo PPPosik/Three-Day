@@ -1,4 +1,4 @@
-package com.example.khj_pc.twoday.Util
+package com.example.khj_pc.threeday.Util
 
 import android.content.Context
 

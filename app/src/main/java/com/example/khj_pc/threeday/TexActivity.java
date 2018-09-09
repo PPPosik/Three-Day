@@ -1,4 +1,4 @@
-package com.example.khj_pc.twoday;
+package com.example.khj_pc.threeday;
 
 import android.Manifest;
 import android.content.ContentUris;
@@ -13,7 +13,6 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -25,14 +24,11 @@ import android.support.v4.content.ContextCompat;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 
-import android.widget.TextView;
 import android.widget.Toast;
 
 import org.apache.commons.io.FileUtils;
@@ -63,23 +59,23 @@ public class TexActivity extends AppCompatActivity implements EasyPermissions.Pe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tex);
+        setContentView(com.example.khj_pc.threeday.R.layout.activity_tex);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(com.example.khj_pc.threeday.R.id.toolbar);
         toolbar.setTitle("");
-        toolbar.setOverflowIcon(ContextCompat.getDrawable(this, R.mipmap.icon_overflow));
+        toolbar.setOverflowIcon(ContextCompat.getDrawable(this, com.example.khj_pc.threeday.R.mipmap.icon_overflow));
         setSupportActionBar(toolbar);
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        mViewPager = findViewById(R.id.container);
+        mViewPager = findViewById(com.example.khj_pc.threeday.R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         AjLatexMath.init(this); // init library: load fonts, create paint, etc.
         CodeProcessor.init(this);
 
 
-        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(com.example.khj_pc.threeday.R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,10 +84,10 @@ public class TexActivity extends AppCompatActivity implements EasyPermissions.Pe
                 mViewPager.setCurrentItem(mViewPager.getCurrentItem() == 0 ? 1 : 0, true);
 
                 if(fabImgFlag){
-                    fab.setImageResource(R.mipmap.left_arrow);
+                    fab.setImageResource(com.example.khj_pc.threeday.R.mipmap.left_arrow);
                 }
                 else{
-                    fab.setImageResource(R.mipmap.right_arrow);
+                    fab.setImageResource(com.example.khj_pc.threeday.R.mipmap.right_arrow);
                 }
                 fabImgFlag = !fabImgFlag;
             }
@@ -103,14 +99,14 @@ public class TexActivity extends AppCompatActivity implements EasyPermissions.Pe
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_tex, menu);
+        getMenuInflater().inflate(com.example.khj_pc.threeday.R.menu.menu_tex, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.get_tex) {
+        if (id == com.example.khj_pc.threeday.R.id.get_tex) {
             if (EasyPermissions.hasPermissions(getApplicationContext(), android.Manifest.permission.READ_EXTERNAL_STORAGE)) {
                 requestFile();
             } else {
@@ -120,7 +116,7 @@ public class TexActivity extends AppCompatActivity implements EasyPermissions.Pe
             return true;
         }
 
-        if(id == R.id.save_tex) {
+        if(id == com.example.khj_pc.threeday.R.id.save_tex) {
             if (EasyPermissions.hasPermissions(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                 if(placeholderFragment.getText().length() > 0) {
                     saveFile();
